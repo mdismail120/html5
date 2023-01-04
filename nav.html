@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       nav ul{
-            list-style-type: none;
+       nav > ul{
+            
             display: flex;
         }
         li{
             padding: 5px;
+            list-style-type: none;
         }
         a{
             text-decoration: none;
@@ -19,6 +20,13 @@
         }
         ul li:hover{
             background-color: #5fb0d3;
+        }
+        nav ul ul{
+            display: none;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
         }
     </style>
 </head>
@@ -29,7 +37,18 @@
         <li><a href="#">blog</a></li>
         <li><a href="#">images</a></li>
         <li><a href="#">videos</a></li>
-        <li><a href="#">setting</a></li>
+        <li>
+            <a href="#">setting</a>
+        
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">images</a></li>
+                <li><a href="#">videos</a></li>
+                <li><a href="#">setting</a>
+                    </li>
+            </ul>
+        </li>
     </ul>
 
  </nav>    
